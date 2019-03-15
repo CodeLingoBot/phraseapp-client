@@ -192,7 +192,7 @@ func formatsByApiName(client *phraseapp.Client) (map[string]*phraseapp.Format, e
 	return formatMap, nil
 }
 
-// Return all locale files from disk that match the source pattern.
+// LocaleFiles returns all locale files from disk that match the source pattern.
 func (source *Source) LocaleFiles() (LocaleFiles, error) {
 	filePaths, err := paths.Glob(placeholders.ToGlobbingPattern(source.File))
 	if err != nil {
